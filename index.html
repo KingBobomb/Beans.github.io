@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My Personal Page</title>
+  <title>My Gaming Clips</title>
   <style>
     :root {
       --bg-color: #ffffff;
@@ -32,7 +32,7 @@
     }
 
     .container {
-      max-width: 800px;
+      max-width: 1000px;
       margin: auto;
       padding: 2rem;
     }
@@ -57,25 +57,49 @@
       background-color: var(--text-color);
       color: var(--bg-color);
     }
+
+    .video-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    video, iframe {
+      width: 100%;
+      border-radius: 10px;
+    }
   </style>
 </head>
 <body>
   <header>
-    <h1>Welcome to My Page</h1>
+    <h1>My Gaming Clips</h1>
     <button class="toggle-button" onclick="toggleDarkMode()">Toggle Dark Mode</button>
   </header>
   <div class="container">
     <section>
-      <h2>About Me</h2>
-      <p>This is a simple one-page website for personal use. You can add anything you like here later — hobbies, links, pictures, and more!</p>
+      <h2>Welcome!</h2>
+      <p>This is my personal website where I upload and share my gaming clips. Check them out below!</p>
     </section>
+
     <section>
-      <h2>Placeholder Section</h2>
-      <p>Coming soon...</p>
+      <h2>Clips Gallery</h2>
+      <div class="video-grid">
+        <!-- Uploaded clip example -->
+        <video controls>
+          <source src="videos/clip1.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+
+        <!-- Embedded video example (YouTube) -->
+        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
+
+        <!-- Add more clips below as needed -->
+      </div>
     </section>
   </div>
   <footer>
-    <p>© 2025 Korey Inman. All rights reserved.</p>
+    <p>© 2025 Your Name. All rights reserved.</p>
   </footer>
 
   <script>
@@ -85,4 +109,3 @@
   </script>
 </body>
 </html>
-
